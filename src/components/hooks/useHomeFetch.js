@@ -1,7 +1,7 @@
 import {useState, useEffect, useCallback} from 'react';
 import { POPULAR_BASE_URL} from '../../config';
 
-export const useHomeFetch=()=>{
+export const useHomeFetch=(searchTerm)=>{
     const [state, setState]= useState({movies: []})
     const [loading, setLoading] = useState(false);
     const [error, setError]= useState(false);
@@ -32,8 +32,22 @@ export const useHomeFetch=()=>{
     },[])
 
     useEffect(()=>{
+      if(sessionStorage.homeState){
+        // console.log("Grabbing from session storage")
+        setState(JSON.parse(sessionStorage.homeState))
+        setLoading(false);
+      }else{
+        // console.log("Grabbing from API")
         fetchMovies(POPULAR_BASE_URL)
+      }
     },[fetchMovies])
+
+    useEffect(()=>{
+      if(!searchTerm){
+        // console.log("Writing session")
+         sessionStorage.setItem('homeState', JSON.stringify(state))
+      }
+    }, [searchTerm, state])
 
     return [{state, loading, error}, fetchMovies];
 }

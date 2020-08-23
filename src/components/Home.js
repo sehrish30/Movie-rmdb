@@ -13,12 +13,12 @@ import NoImage from './images/no_image.jpg';
 
 const Home = () => {
 
+   const [searchTerm, setSearchTerm] =useState('');
    const [{state : {movies, currentPage, totalPages, heroImage},
        loading,
        error},
         fetchMovies
-      ]=useHomeFetch();
-   const [searchTerm, setSearchTerm] =useState('');
+      ]=useHomeFetch(searchTerm);
   
    // load more search 
    const searchMovies= useCallback(search=>{

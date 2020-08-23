@@ -33,8 +33,19 @@ export const useMovieFetch= movieId=>{
     }, [movieId])
 
     useEffect(()=>{
+      if(localStorage[movieId]){
+        // console.log("Grabbing from local storage");
+        setState(JSON.parse(localStorage[movieId]));
+        setLoading(false);
+      }else{
+        // console.log("Grabbing from API");
         fetchData();
-    }, [fetchData])
+      }
+    }, [fetchData, movieId])
+
+    useEffect(()=>{
+      localStorage.setItem(movieId, JSON.stringify(state));
+    },[movieId, state])
 
   return [state, loading, error]
   //no need to fetch fetchdata becuase we are not using load more for this
