@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 
 export const StyledGrid = styled.div`
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 5px 40px;
+  background-color: #decdc3;
   h1 {
     font-family: 'Engagement', cursive;
     font-size: 42px;
+    color: #ea5455;
+    text-align: center;
 
     @media screen and (max-width: 768px) {
       font-size: 22px;
