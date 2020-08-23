@@ -5,7 +5,7 @@ export const StyledMovieInfo = styled.div`
   background: ${props =>
     props.backdrop
       ? `url('${IMAGE_BASE_URL}${BACKDROP_SIZE}${props.backdrop}')`
-      : '#000'};
+      : '#e5e5e5'};
   background-size: cover !important;
   background-position: center !important;
   width: 100%;
@@ -17,7 +17,7 @@ export const StyledMovieInfo = styled.div`
     max-width: 1280px;
     min-height: 450px;
     margin: 0 auto;
-    background: rgb(0, 0, 0, 0.7);
+    background: rgb(45, 64, 89, 0.7);
     border-radius: 20px;
     position: relative;
   }
@@ -32,14 +32,15 @@ export const StyledMovieInfo = styled.div`
   }
 
   .movieinfo-text {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Chathura', sans-serif;
     padding: 40px;
-    color: #fff;
+    color: #e5e5e5;
     overflow: hidden;
 
     h1 {
-      font-family: 'Abel', sans-serif;
-      font-size: 48px;
+      font-family: 'Engagement', cursive;
+      font-size: 3.2rem;
+      color: #ea5455;
       margin: 0;
 
       @media screen and (max-width: 1000px) {
@@ -48,14 +49,16 @@ export const StyledMovieInfo = styled.div`
     }
 
     h3 {
-      font-size: 16px;
+      font-size: 1.8rem;
       line-height: 0;
       margin-top: 30px;
+      color: #e5e5e5;
     }
 
     p {
-      font-family: 'Abel', sans-serif;
-      font-size: 18px;
+      font-family: 'Chathura', sans-serif;
+      font-size: 2.5rem;
+      color: #e5e5e5;
       line-height: 26px;
     }
   }
@@ -71,18 +74,21 @@ export const StyledMovieInfo = styled.div`
     justify-content: center;
     width: 35px;
     height: 35px;
-    background: #fff;
-    color: #000;
+    background: #e5e5e5;
+    color: #2d4059;
     font-weight: 800;
     border-radius: 25px;
     margin: 0px 0 0 0;
+    font-size: 1.5rem;
   }
 
   .director {
     margin: 0 0 0 40px;
 
     p {
-      margin: 0;
+      font-family: 'Chathura', sans-serif;
+      font-size: 2rem;
+      color: #e5e5e5;
     }
   }
 

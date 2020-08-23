@@ -6,17 +6,22 @@ export const StyledMovieInfoBar = styled.div`
   width: 100%;
   min-height: 100px;
   height: auto;
-  background: #1c1c1c;
+  background: #2d4059;
   padding: 20px;
   box-sizing: border-box;
   font-family: 'Abel', sans-serif;
   font-size: 20px;
+  justify-content: center;
+  align-items: center;
 
   .movieinfobar-content {
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
-    color: #fff;
+    color: #decdc3;
+    justify-content: center;
+    align-items: center;
+    display: relative;
   }
 
   .movieinfobar-content-col {

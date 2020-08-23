@@ -8,11 +8,7 @@ export const StyledMovieThumb = styled.div`
     transition: all 0.3s;
     object-fit: cover;
     border-radius: 20px;
-
-    :hover {
-      opacity: 0.8;
-      transform: scale(1.2,1.1);
-    }
+    cursor:default;
 
     @media screen and (max-width: 1024px) {
       height: 300px;
@@ -33,5 +29,12 @@ export const StyledMovieThumb = styled.div`
 
   .clickable {
       cursor: pointer;
+
+      :hover{
+        opacity: 0.8;
+        transform: scale(1.2,1.1);
+      }
     }
+
+    
 `;

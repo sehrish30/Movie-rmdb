@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const StyledActor = styled.div`
-  font-family: 'Abel', sans-serif;
-  color: #fff;
-  background: #1c1c1c;
+  font-family: 'Chathura', sans-serif;
+  color: #ea5455;
+  background: #e5e5e5;
   border-radius: 20px;
   padding: 5px;
   text-align: center;
+  font-size: 2rem;
 
   img {
     display: block;
