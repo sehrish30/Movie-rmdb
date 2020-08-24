@@ -19,13 +19,14 @@ export const StyledActor = styled.div`
 
   .actor-name {
     display: block;
-    font-size: 18px;
+    font-size: 2.5rem;
     margin: 10px 0 0 0;
+    font-family: 'Engagement', cursive;
   }
 
   .actor-character {
     display: block;
-    font-size: 16px;
+    font-size: 2rem;
     margin: 0 0 10px 0;
   }
 `;

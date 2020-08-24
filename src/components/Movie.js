@@ -27,6 +27,7 @@ const Movie = ({movieId}) => {
          budget={state.budget}
          revenue={state.revenue}
          />
+        
          <Grid header="Actors">
             {state.actors.map(actor =>(
                 <Actor key={actor.credit_id} actor={actor}/>
